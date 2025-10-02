@@ -10,8 +10,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-
+    <link
+        href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -20,7 +25,7 @@
     <!-- Navbar -->
     <header class="animate__animated animate__backInDown">
         <nav class="navbar">
-            <div class="logo">LawHub</div>
+            <div class="logo">Advocate Deepak Tanwar</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
@@ -34,42 +39,55 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-left">
-            <h1 class="animate__animated animate__pulse">Expert Legal<br>Solutions</h1>
-            <div class="circle-btn">Schedule<br>A Call</div>
-            <div class="sub-image">
-                <span class="image-background"></span>
-                <img src="./assets/hero-image.jpg" alt="Reading Lawyer">
-            </div>
-        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col hero-column">
+                    <h2 class="hero-heading">Expert Legal
+                        Solutions</h2>
 
-        <div class="hero-center">
-            <img src="./assets/deepaktanwarphoto-removebg-preview.png" alt="Main Lawyer" class="lawyer-img animate__animated animate__fadeIn">
-        </div>
-
-        <div class="hero-right">
-            <div class="tagline">
-                <img src="./assets/hero-gravel.png" alt="Gavel">
-                <p>Trusted attorneys committed<br>to protecting your rights and<br>securing your future.</p>
-            </div>
-            <div class="rating">
-                <span>Our Overall Rating</span>
-                <strong>----- 5.0 ⭐</strong>
-            </div>
-            <div class="stats-card animate__animated animate__fadeIn">
-                <h2>1000+ <br><span>Client <br>Consolations</span></h2>
-
-                <hr class="divider" />
-
-                <div class="stats-bottom">
-                    <div class="story">
-                        Our Story
-                        <button class="play-btn">▶</button>
+                    <div class="Schedule-button">
+                        Schedule A Call
                     </div>
 
-                    <div class="mini-img">
-                        <span class="black-background"></span>
-                        <img src="./assets/hero-farmer.png" alt="Client">
+                    <div class="left-image-wrap">
+                        <span class="image-background"></span>
+                        <img src="./assets/hero-image.jpg" alt="" class="left-image">
+                    </div>
+
+                    <div class="trusted-attorneys">
+                        <img src="./assets/hero-gravel.png" alt=""> <br>
+                        <p>Trusted attorneys committed
+                            to protecting your rights and
+                            securing your future.</p>
+                    </div>
+
+                    <div class="rating">
+                        Our Overall Rating <br> <strong>----- 5.0</strong> ⭐
+                    </div>
+
+                    <img src="./assets/deepaktanwarphoto-removebg-preview.png" alt="" class="center-hero-image">
+
+                    <div class="our-story-box">
+                        <div class="client-box">
+                            1000+
+                            <span>Client <br>Consolations</span>
+                        </div>
+                        <div class="story container-fluid">
+                            <div class="row">
+                                <div class="col col-text">
+                                    Our Story
+
+                                    <span class="material-symbols-outlined play-button">
+                                        arrow_right
+                                    </span>
+                                </div>
+                                <div class="col story-image">
+                                    <span class="story-image-background"></span>
+                                    <img src="./assets/hero-farmer.png" alt="">
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -111,77 +129,195 @@
     <section id="support" class="support">
         <h2>Expert Legal Support</h2>
         <div class="support-cards">
-            <div class="card">
-                Litigation & Dispute Resolution
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quisquam dolor obcaecati,
-                    aspernatur ad, iusto eos ipsum, eum aut perferendis quae sit? Perspiciatis veniam dignissimos,
-                    officiis hic ipsa aperiam.</p>
+
+            <div class="expert-card">
+
+                <div class="card-back">
+                    <img src="./assets/sample-image.png" alt="">
+                </div>
+
+                <div class="card-front">
+                    Litigation & Dispute Resolution
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quisquam dolor obcaecati,
+                        aspernatur ad, iusto eos ipsum, eum aut perferendis quae sit? Perspiciatis veniam dignissimos,
+                        officiis hic ipsa aperiam.</p>
+                </div>
+
             </div>
-            <div class="card">
-                Employment Law Guidance
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quisquam dolor obcaecati,
-                    aspernatur ad, iusto eos ipsum, eum aut perferendis quae sit? Perspiciatis veniam dignissimos,
-                    officiis hic ipsa aperiam.</p>
+            <div class="expert-card">
+
+                <div class="card-back">
+                    <img src="./assets/sample-image.png" alt="">
+                </div>
+
+                <div class="card-front">
+                    Employment Law Guidance
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quisquam dolor obcaecati,
+                        aspernatur ad, iusto eos ipsum, eum aut perferendis quae sit? Perspiciatis veniam dignissimos,
+                        officiis hic ipsa aperiam.</p>
+                </div>
             </div>
-            <div class="card highlight">
-                Personalized Legal Advice
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quisquam dolor obcaecati,
-                    aspernatur ad, iusto eos ipsum, eum aut perferendis quae sit? Perspiciatis veniam dignissimos,
-                    officiis hic ipsa aperiam.</p>
+            <div class="expert-card">
+
+                <div class="card-back">
+                    <img src="./assets/sample-image.png" alt="">
+                </div>
+
+                <div class="card-front">
+                    Personalized Legal Advice
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quisquam dolor obcaecati,
+                        aspernatur ad, iusto eos ipsum, eum aut perferendis quae sit? Perspiciatis veniam dignissimos,
+                        officiis hic ipsa aperiam.</p>
+                </div>
             </div>
-            <div class="card">
-                Technology & Cyber Law
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quisquam dolor obcaecati,
-                    aspernatur ad, iusto eos ipsum, eum aut perferendis quae sit? Perspiciatis veniam dignissimos,
-                    officiis hic ipsa aperiam.</p>
+            <div class="expert-card">
+
+                <div class="card-back">
+                    <img src="./assets/sample-image.png" alt="">
+                </div>
+
+                <div class="card-front">
+                    Technology & Cyber Law
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quisquam dolor obcaecati,
+                        aspernatur ad, iusto eos ipsum, eum aut perferendis quae sit? Perspiciatis veniam dignissimos,
+                        officiis hic ipsa aperiam.</p>
+                </div>
             </div>
+        </div>
+
+        <div class="view-more-wrap">
+            <span>Trusted Legal support to protect your rights and secure your future.</span>
+            <button>View More</button>
         </div>
 
     </section>
 
+    <!-- result section -->
+    <section class="result" id="result">
+        <h2>The Estimeed Legal Practices <br>
+            That Directs The Future
+        </h2>
+
+        <div class="result-about">
+            <div class="client">
+                1000+ <br>
+                <span>Client Consolations</span>
+            </div>
+
+            <div class="recovered">
+                10mlns <br>
+                <span>recovered Cost for Clients</span>
+            </div>
+
+            <div class="professional">
+                30+ <br>
+                <span>Professional Attorneys</span>
+            </div>
+
+            <div class="successful">
+                95% <br>
+                <span>Successful Cases</span>
+            </div>
+
+            <img src="./assets/deepaktanwarphoto-removebg-preview.png" alt="">
+        </div>
+    </section>
+
 
     <!-- FAQ Section -->
-    <!-- <section class="faq">
+    <section class="faq" id="faq">
         <h2>Our Expert Answers</h2>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Accordion Item #1
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                        the <code>.accordion-flush</code> class. This is the first item’s accordion body.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Accordion Item #2
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                        the <code>.accordion-flush</code> class. This is the second item’s accordion body. Let’s imagine
+                        this being filled with some actual content.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Accordion Item #3
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                        the <code>.accordion-flush</code> class. This is the third item’s accordion body. Nothing more
+                        exciting happening here in terms of content, but just filling up the space to make it look, at
+                        least at first glance, a bit more representative of how this would look in a real-world
+                        application.</div>
+                </div>
+            </div>
 
-        <div class="faq-item">
-            <button class="faq-question">How much consultation cost? <span>+</span></button>
-            <div class="faq-answer">Our first consultation is free of cost.</div>
-        </div>
-
-        <div class="faq-item">
-            <button class="faq-question">How fast can I get legal help? <span>+</span></button>
-            <div class="faq-answer">On average, we respond within 10 minutes.</div>
-        </div>
-    </section> -->
-
-    <!-- Reviews Section -->
-    <section id="reviews" class="reviews">
-        <h2>What Our Client Said</h2>
-        <div class="review-grid">
-            <div class="review">"Great service! Highly recommend." - John D.</div>
-            <div class="review">"Professional and supportive team." - Sarah M.</div>
-            <div class="review">"Helped me win my case!" - Alex P.</div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                        Accordion Item #4
+                    </button>
+                </h2>
+                <div id="flush-collapseFour" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                        the <code>.accordion-flush</code> class. This is the third item’s accordion body. Nothing more
+                        exciting happening here in terms of content, but just filling up the space to make it look, at
+                        least at first glance, a bit more representative of how this would look in a real-world
+                        application.</div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message"></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <img src="./assets/contact-us.png" alt="">
+                </div>
+                <div class="col-8">
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
     </section>
 
     <!-- Footer -->
     <footer>
         <p>© 2025 LawHub. All Rights Reserved.</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./index.js"></script>
 
-    <script src="script.js"></script>
 </body>
 
 </html>
