@@ -17,6 +17,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -99,17 +105,17 @@
         <h2>We Expertise On</h2>
         <div class="service-grid">
             <div class="service">
-                <img src="../advocate/assets/familylaw.jpg" alt="Family Law">
+                <img src="./assets/familylaw.jpg" alt="Family Law">
                 <h3>Family Law</h3>
                 <p>Guiding families through complex legal matters with care.</p>
             </div>
             <div class="service">
-                <img src="../advocate/assets/businesslaw.jpg" alt="Business Law">
+                <img src="./assets/businesslaw.jpg" alt="Business Law">
                 <h3>Business Law</h3>
                 <p>Supporting businesses with reliable legal solutions.</p>
             </div>
             <div class="service">
-                <img src="../advocate/assets/criminalLaw.jfif" alt="Criminal Law">
+                <img src="./assets/criminalLaw.jfif" alt="Criminal Law">
                 <h3>Criminal Law</h3>
                 <p>Expert representation in all criminal law cases.</p>
             </div>
@@ -133,54 +139,56 @@
             <div class="expert-card">
 
                 <div class="card-back">
-                    <img src="./assets/sample-image.png" alt="">
+                    <img src="./assets/litigation.png" alt="">
                 </div>
 
                 <div class="card-front">
-                    Litigation & Dispute Resolution
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quisquam dolor obcaecati,
-                        aspernatur ad, iusto eos ipsum, eum aut perferendis quae sit? Perspiciatis veniam dignissimos,
-                        officiis hic ipsa aperiam.</p>
+                    <span>Litigation & Dispute Resolution</span>
+                    <p>We handle civil, criminal, and commercial disputes with a focus on protecting your rights. From
+                        negotiation to courtroom advocacy, our aim is to resolve conflicts effectively and in your best
+                        interest.</p>
                 </div>
 
             </div>
             <div class="expert-card">
 
                 <div class="card-back">
-                    <img src="./assets/sample-image.png" alt="">
+                    <img src="./assets/employmentLaw.png" alt="">
                 </div>
 
                 <div class="card-front">
-                    Employment Law Guidance
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quisquam dolor obcaecati,
-                        aspernatur ad, iusto eos ipsum, eum aut perferendis quae sit? Perspiciatis veniam dignissimos,
-                        officiis hic ipsa aperiam.</p>
+                    <span>Employment Law Guidance</span>
+
+                    <p>We provide advice on workplace rights, contracts, disputes, and compliance to ensure fair and
+                        lawful employment practices.</p>
                 </div>
             </div>
             <div class="expert-card">
 
                 <div class="card-back">
-                    <img src="./assets/sample-image.png" alt="">
+                    <img src="./assets/personalisedLegalAdvice.png" alt="">
                 </div>
 
                 <div class="card-front">
-                    Personalized Legal Advice
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quisquam dolor obcaecati,
-                        aspernatur ad, iusto eos ipsum, eum aut perferendis quae sit? Perspiciatis veniam dignissimos,
-                        officiis hic ipsa aperiam.</p>
+                    <span>Personalized Legal Advice</span>
+
+                    <p>We understand that every case is unique. Our team provides clear, tailored legal guidance suited
+                        to your specific needs—helping you make informed decisions with confidence and peace of mind.
+                    </p>
                 </div>
             </div>
             <div class="expert-card">
 
                 <div class="card-back">
-                    <img src="./assets/sample-image.png" alt="">
+                    <img src="./assets/Cyber-Laws.png" alt="">
                 </div>
 
                 <div class="card-front">
-                    Technology & Cyber Law
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia quisquam dolor obcaecati,
-                        aspernatur ad, iusto eos ipsum, eum aut perferendis quae sit? Perspiciatis veniam dignissimos,
-                        officiis hic ipsa aperiam.</p>
+                    <span>Technology & Cyber Law</span>
+
+                    <p>We assist with data protection, online fraud, IT contracts, and cybercrime matters. Our expertise
+                        ensures your digital rights and business interests remain secure in today’s evolving tech world.
+                    </p>
                 </div>
             </div>
         </div>
@@ -292,29 +300,131 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
-        <div class="container">
-            <div class="row">
-                <div class="col-4">
-                    <img src="./assets/contact-us.png" alt="">
+
+        <div class="contact-container">
+            <!-- Left Column: Form -->
+            <div class="contact-form">
+                <h3>Request Consultation</h3>
+                <form>
+                    <div class="form-row">
+                        <input type="text" placeholder="Your full name" required>
+                        <input type="email" placeholder="you@email.com" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" placeholder="+91-" required>
+                        <select>
+                            <option value="">Select</option>
+                            <option>Criminal Law</option>
+                            <option>Civil Case</option>
+                            <option>Corporate Law</option>
+                        </select>
+                    </div>
+                    <textarea placeholder="Tell us briefly about your matter"></textarea>
+                    <input type="text" placeholder="e.g. Weekdays 3–6 PM">
+                    <button type="submit">REQUEST CONSULTATION</button>
+                </form>
+            </div>
+
+            <!-- Right Column: Info Boxes -->
+            <div class="contact-info">
+                <div class="info-box">
+                    <p><b>Office</b><br>WZ-912, Naraina Village, Delhi 110028</p>
+                    <p><b>Phone</b><br>+91-9581241214, +91-9999868490</p>
+                    <p><b>Email</b><br>adveepaktanwar9@gmail.com</p>
                 </div>
-                <div class="col-8">
-                    <form class="contact-form">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <textarea placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
+
+                <div class="map-box">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.722962612883!2d77.133!3d28.619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1be5ddf7f4f9%3A0x4e3cc46b24017b9d!2sNaraina%20Village!5e0!3m2!1sen!2sin!4v1660000000000"
+                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+
+                <div class="faq-box">
+                    <h4>FAQ</h4>
+                    <p>What documents to bring?</p>
+                    <p>How long does a case review take?</p>
                 </div>
             </div>
         </div>
-
-
     </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>Customer Reviews</h2>
+
+            <div class="slider-wrapper">
+                <button class="slide-btn prev">&#10094;</button>
+
+                <div class="slider">
+                    <div class="testimonial-card">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Josh">
+                        <h3>Josh</h3>
+                        <p class="role">CTO</p>
+                        <p class="review">
+                            I’m beyond grateful for LawHub. They gave me clear guidance every step
+                            of the way and achieved a fantastic outcome for my family.
+                        </p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Robert">
+                        <h3>Robert</h3>
+                        <p class="role">COO</p>
+                        <p class="review">
+                            The team at LawHub was amazing. They helped me navigate a difficult
+                            situation with ease, and I couldn’t be happier with the result.
+                        </p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Michael">
+                        <h3>Michael</h3>
+                        <p class="role">COO</p>
+                        <p class="review">
+                            Professional, trustworthy, and always there when I needed them.
+                            LawHub made a complex case easy to understand and resolved it efficiently.
+                        </p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <img src="https://randomuser.me/api/portraits/men/71.jpg" alt="Rachel">
+                        <h3>Rachel</h3>
+                        <p class="role">Manager</p>
+                        <p class="review">
+                            From start to finish, LawHub treated my case with utmost care and respect.
+                            Their expert advice made all the difference.
+                        </p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <img src="https://randomuser.me/api/portraits/men/71.jpg" alt="Aayush">
+                        <h3>Aayush</h3>
+                        <p class="role">Manager</p>
+                        <p class="review">
+                            From start to finish, LawHub treated my case with utmost care and respect.
+                            Their expert advice made all the difference.
+                        </p>
+                    </div>
+                </div>
+
+                <button class="slide-btn next">&#10095;</button>
+            </div>
+
+            <button class="schedule-btn">Make A Schedule Now</button>
+        </div>
+    </section>
+
+
 
     <!-- Footer -->
     <footer>
         <p>© 2025 LawHub. All Rights Reserved.</p>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Slick JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./index.js"></script>
 
