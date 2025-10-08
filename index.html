@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LawHub - Expert Legal Solutions</title>
+    <title>Expert Legal Solutions</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -23,29 +23,52 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-    <!-- Navbar -->
-    <header class="animate__animated animate__backInDown">
-        <nav class="navbar">
-            <div class="logo">Advocate Deepak Tanwar</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#support">Support</a></li>
-                <li><a href="#reviews">Reviews</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <a href="#contact" class="btn">Free Consultation</a>
-        </nav>
-    </header>
-
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container-fluid">
+    <section class="hero" id="hero">
+        <header>
+            <nav class="navbar navbar-expand-lg w-100">
+                <div class="container-fluid">
+                    <a href="./index.html#hero" target="_self" style="text-decoration: none; color: inherit;"
+                        class="route-element">
+                        Advocate <span>Deepak Tanwar</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        <a href="./index.html"></a>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#hero">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#services">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#support">Support</a>
+                            </li>
+                            <!-- <li class="nav-item">
+                                <a class="nav-link" href="#plans">Plans</a>
+                            </li> -->
+                            <li class="nav-item">
+                                <a class="nav-link contact-button" href="#contact">Contact Me</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        <div class="container-fluid hero-section">
             <div class="row">
                 <div class="col hero-column">
                     <h2 class="hero-heading">Expert Legal
@@ -201,28 +224,28 @@
     </section>
 
     <!-- result section -->
-    <section class="result" id="result">
+    <section class="result" id="result" style="overflow: hidden;">
         <h2>The Estimeed Legal Practices <br>
             That Directs The Future
         </h2>
 
         <div class="result-about">
-            <div class="client">
+            <div class="client animate__animated " data-animate="animate__backInDown">
                 1000+ <br>
                 <span>Client Consolations</span>
             </div>
 
-            <div class="recovered">
+            <div class="recovered" data-animate="animate__backInLeft">
                 10mlns <br>
                 <span>recovered Cost for Clients</span>
             </div>
 
-            <div class="professional">
+            <div class="professional" data-animate="animate__backInRight">
                 30+ <br>
                 <span>Professional Attorneys</span>
             </div>
 
-            <div class="successful">
+            <div class="successful" data-animate="animate__backInUp">
                 95% <br>
                 <span>Successful Cases</span>
             </div>
@@ -231,10 +254,9 @@
         </div>
     </section>
 
-
     <!-- FAQ Section -->
     <section class="faq" id="faq">
-        <h2>Our Expert Answers</h2>
+        <h2>Expert Answers</h2>
         <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item">
                 <h2 class="accordion-header">
@@ -298,125 +320,128 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
+    <section id="contact" class="contact container-fluid">
+        <div class="row">
+            <div class="col-md-6 contact-img">
+                <img src="./assets/supreme-court-museum.jpg" alt="" data-animate="animate__bounceInLeft">
+            </div>
+            <div class="col-md-6 contact-form">
+                <h2>Contact Us</h2>
 
-        <div class="contact-container">
-            <!-- Left Column: Form -->
-            <div class="contact-form">
-                <h3>Request Consultation</h3>
                 <form>
                     <div class="form-row">
-                        <input type="text" placeholder="Your full name" required>
-                        <input type="email" placeholder="you@email.com" required>
+                        <label for="full-name">
+                            Full Name*
+                            <input type="text" placeholder="Your full name" required id="full-name" name="fullName">
+                        </label>
+                        <label for="email">
+                            Email*
+                            <input type="email" placeholder="you@email.com" required id="email" name="email">
+                        </label>
+
                     </div>
                     <div class="form-row">
-                        <input type="text" placeholder="+91-" required>
-                        <select>
-                            <option value="">Select</option>
-                            <option>Criminal Law</option>
-                            <option>Civil Case</option>
-                            <option>Corporate Law</option>
-                        </select>
+                        <label for="number">
+                            Mobile Number*
+                            <input type="tel" placeholder="Mobile Number" required id="number" name="number">
+                        </label>
+
+                        <label for="type">
+                            Select Criminal Type
+                            <select id="type" name="type">
+                                <option value="">Select</option>
+                                <option>Criminal Law</option>
+                                <option>Civil Case</option>
+                                <option>Corporate Law</option>
+                            </select>
+                        </label>
+
                     </div>
-                    <textarea placeholder="Tell us briefly about your matter"></textarea>
-                    <input type="text" placeholder="e.g. Weekdays 3–6 PM">
-                    <button type="submit">REQUEST CONSULTATION</button>
+                    <label for="description">
+                        Description* <br>
+                        <textarea placeholder="Tell us briefly about your matter" required id="description"
+                            name="description"></textarea>
+                    </label>
+
+                    <label for="appointment">
+                        Appointment Time <br>
+                        <input type="text" placeholder="e.g. Weekdays 3–6 PM" required id="appointment"
+                            name="appointment">
+                    </label>
+
+                    <button class="btn" type="submit">REQUEST CONSULTATION</button>
                 </form>
-            </div>
-
-            <!-- Right Column: Info Boxes -->
-            <div class="contact-info">
-                <div class="info-box">
-                    <p><b>Office</b><br>WZ-912, Naraina Village, Delhi 110028</p>
-                    <p><b>Phone</b><br>+91-9581241214, +91-9999868490</p>
-                    <p><b>Email</b><br>adveepaktanwar9@gmail.com</p>
-                </div>
-
-                <div class="map-box">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.722962612883!2d77.133!3d28.619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1be5ddf7f4f9%3A0x4e3cc46b24017b9d!2sNaraina%20Village!5e0!3m2!1sen!2sin!4v1660000000000"
-                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
-                    </iframe>
-                </div>
-
-                <div class="faq-box">
-                    <h4>FAQ</h4>
-                    <p>What documents to bring?</p>
-                    <p>How long does a case review take?</p>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials">
-        <div class="container">
-            <h2>Customer Reviews</h2>
+        <h2>What my Client Says !!</h2>
 
-            <div class="slider-wrapper">
-                <button class="slide-btn prev">&#10094;</button>
+        <div class="carousel-container">
+            <button class="carousel-btn prev">&lt;</button>
+            <div class="carousel">
+                <div class="carousel-card">
+                    <div class="avatar-wrap">
+                        <div class="review-avatar">
+                            <img src="./assets/hero-farmer.png" alt="">
+                        </div>
+                        <div class="review-name">Rohit Sharma</div>
 
-                <div class="slider">
-                    <div class="testimonial-card">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Josh">
-                        <h3>Josh</h3>
-                        <p class="role">CTO</p>
-                        <p class="review">
-                            I’m beyond grateful for LawHub. They gave me clear guidance every step
-                            of the way and achieved a fantastic outcome for my family.
-                        </p>
                     </div>
 
-                    <div class="testimonial-card">
-                        <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Robert">
-                        <h3>Robert</h3>
-                        <p class="role">COO</p>
-                        <p class="review">
-                            The team at LawHub was amazing. They helped me navigate a difficult
-                            situation with ease, and I couldn’t be happier with the result.
-                        </p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Michael">
-                        <h3>Michael</h3>
-                        <p class="role">COO</p>
-                        <p class="review">
-                            Professional, trustworthy, and always there when I needed them.
-                            LawHub made a complex case easy to understand and resolved it efficiently.
-                        </p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <img src="https://randomuser.me/api/portraits/men/71.jpg" alt="Rachel">
-                        <h3>Rachel</h3>
-                        <p class="role">Manager</p>
-                        <p class="review">
-                            From start to finish, LawHub treated my case with utmost care and respect.
-                            Their expert advice made all the difference.
-                        </p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <img src="https://randomuser.me/api/portraits/men/71.jpg" alt="Aayush">
-                        <h3>Aayush</h3>
-                        <p class="role">Manager</p>
-                        <p class="review">
-                            From start to finish, LawHub treated my case with utmost care and respect.
-                            Their expert advice made all the difference.
-                        </p>
-                    </div>
+                    <div class="review-stars">Rating - ⭐⭐⭐⭐⭐</div>
+                    <div class="review-text">Excellent legal support! Very professional and responsive.</div>
                 </div>
 
-                <button class="slide-btn next">&#10095;</button>
+                <div class="carousel-card">
+                    <div class="avatar-wrap">
+                        <div class="review-avatar">👩‍⚖️</div>
+                        <div class="review-name">Priya Singh</div>
+                    </div>
+                    <div class="review-stars">Rating - ⭐⭐⭐⭐</div>
+                    <div class="review-text">Handled my case with great expertise. Highly recommended!</div>
+                </div>
+
+                <div class="carousel-card">
+                    <div class="avatar-wrap">
+                        <div class="review-avatar">👨‍⚖️</div>
+                        <div class="review-name">Amit Verma</div>
+                    </div>
+
+                    <div class="review-stars">Rating - ⭐⭐⭐⭐</div>
+                    <div class="review-text">Very reliable and knowledgeable advocate. Helped me win my case.</div>
+                </div>
+
+                <div class="carousel-card">
+                    <div class="avatar-wrap">
+                        <div class="review-avatar">👩‍⚖️</div>
+                        <div class="review-name">Sneha Joshi</div>
+                    </div>
+
+                    <div class="review-stars">Rating - ⭐⭐⭐⭐</div>
+                    <div class="review-text">Prompt and professional service. Felt confident throughout.</div>
+                </div>
+
+                <div class="carousel-card">
+                    <div class="avatar-wrap">
+                        <div class="review-avatar">👨‍⚖️</div>
+                        <div class="review-name">Rajesh Kumar</div>
+                    </div>
+                    <div class="review-stars">Rating - ⭐⭐⭐⭐⭐</div>
+                    <div class="review-text">Exceptional guidance and support. Truly a top-notch advocate.</div>
+                </div>
             </div>
-
-            <button class="schedule-btn">Make A Schedule Now</button>
+            <button class="carousel-btn next">&gt;</button>
         </div>
+
+        <p>
+            You Look Interested ?? Don't Wait
+            <a class="btn make-schedule" href="#contact">Make A schedule</a>
+            With Me
+        </p>
     </section>
-
-
 
     <!-- Footer -->
     <footer>
