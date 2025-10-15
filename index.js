@@ -150,3 +150,6 @@ function rotateCarouselBackward() {
 
 document.querySelector('.next').addEventListener('click', rotateCarouselForward);
 document.querySelector('.prev').addEventListener('click', rotateCarouselBackward);
+
+// Auto-rotation
+// setInterval(rotateCarouselForward, 4000);
