@@ -23,14 +23,44 @@ header {
     transition: 0.3s ease;
 }
 
+header.scrolled {
+    background-color: #fff;
+}
+
 .navbar {
-    padding: 8px 20px;
-    background: #fff;
+    padding: 0;
+    /* background: #fff; */
+}
+
+.navbar .container-fluid{
+    padding-right: 0;
 }
 
 .navbar .container-fluid>a {
     font-size: clamp(18px, 2vw, 24px);
     font-weight: 600;
+}
+
+.navbar:has(.container-fluid .navbar-collapse.show) {
+    background-color: #fff;
+}
+
+.navbar:has(.container-fluid .navbar-collapse.collapsing) {
+    background-color: #fff;
+}
+
+.navbar .container-fluid .navbar-collapse.show a.nav-link.contact-button {
+    margin-left: 0;
+    max-width: 130px;
+}
+
+.navbar .container-fluid .navbar-collapse.collapsing a.nav-link.contact-button {
+    margin-left: 0;
+    max-width: 130px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
 }
 
 .navbar .container-fluid>a span {
@@ -51,15 +81,16 @@ header {
 .contact-button {
     background: #000;
     color: #fff !important;
-    padding: 10px 24px !important;
+    padding: 20px 24px !important;
     margin-left: 25px;
     font-size: clamp(14px, 1.1vw, 17px);
-    border-radius: 5px;
+    /* border-radius: 5px; */
     transition: 0.3s ease;
 }
 
 .contact-button:hover {
     background: #d62828;
+    text-wrap-mode: nowrap;
 }
 
 /* ===== HERO SECTION ===== */
@@ -70,7 +101,7 @@ header {
 
 .container-fluid.hero-section {
     padding-top: 110px;
-    min-height: 100vh;
+    min-height: 70vh;
 }
 
 .col.hero-column {
@@ -78,7 +109,7 @@ header {
     justify-content: center;
     align-items: center;
     position: relative;
-    min-height: calc(100vh - 100px);
+    min-height: calc(100vh - 450px);
 }
 
 /* HEADLINE */
@@ -186,9 +217,9 @@ h2.hero-heading {
 
 /* CENTER IMAGE */
 .center-hero-image {
-    height: 90vh;
+    /* height: 90vh; */
     width: auto;
-    max-width: clamp(300px, 40vw, 480px);
+    max-width: clamp(300px, 50vw, 480px);
     object-fit: contain;
 }
 
@@ -276,12 +307,49 @@ h2.hero-heading {
     border-radius: 8px;
 }
 
+/* about section */
+section#about {
+    background-color: #081322;
+    padding: 60px 35px;
+}
+
+section#about .image-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#about img {
+    width: 100%;
+    max-height: 448px;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+section#about h2,
+section#about p {
+    color: #fff;
+    line-height: 2;
+}
+
+section#about .name {
+    color: #c72b34;
+    ;
+}
 
 /* Services Section */
 #services {
     padding: 60px 40px;
-    background: linear-gradient(to right, #ffe5e5, #fff);
+    /* background: linear-gradient(to right, #ffe5e5, #fff); */
     text-align: center;
+
+    background: hsla(49, 100%, 92%, 1);
+    background: linear-gradient(180deg, hsla(49, 100%, 92%, 1) 43%, hsla(0, 100%, 91%, 1) 100%);
+    background: -moz-linear-gradient(180deg, hsla(49, 100%, 92%, 1) 43%, hsla(0, 100%, 91%, 1) 100%);
+    background: -webkit-linear-gradient(180deg, hsla(49, 100%, 92%, 1) 43%, hsla(0, 100%, 91%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#FFF8D8", endColorstr="#FFD2D2", GradientType=1);
 }
 
 #services>h2 {
@@ -344,6 +412,7 @@ h2.hero-heading {
     padding: 10px 15px 20px;
     color: #333;
     text-align: start;
+    max-width: 440px;
 }
 
 /* Learn More Box */
@@ -524,13 +593,20 @@ h2.hero-heading {
 }
 
 /* RESULT SECTION */
-section#result {
+section#result,
+section#faq {
     padding: 36px 60px;
-    background-image: url('./assets/estimate_bg.png');
+    /* background-image: url('./assets/estimate_bg.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center; */
     overflow: hidden;
+    background: hsla(49, 100%, 92%, 1);
+    background: linear-gradient(180deg, hsla(49, 100%, 92%, 1) 43%, hsla(0, 100%, 91%, 1) 100%);
+    background: -moz-linear-gradient(180deg, hsla(49, 100%, 92%, 1) 43%, hsla(0, 100%, 91%, 1) 100%);
+    background: -webkit-linear-gradient(180deg, hsla(49, 100%, 92%, 1) 43%, hsla(0, 100%, 91%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#FFF8D8", endColorstr="#FFD2D2", GradientType=1);
 }
 
 section#result>h2 {
@@ -625,7 +701,7 @@ section#result>h2 {
 /* FAQ Section */
 section#faq {
     padding: 60px 20px;
-    background: linear-gradient(180deg, hsla(49, 100%, 92%, 1) 43%, hsla(0, 100%, 91%, 1) 100%);
+    /* background: linear-gradient(180deg, hsla(49, 100%, 92%, 1) 43%, hsla(0, 100%, 91%, 1) 100%); */
     font-family: "Spectral", serif;
 }
 
@@ -711,7 +787,7 @@ div#accordionFlushExample {
 /* Contact Section */
 #contact {
     padding: 60px 20px;
-    background: #fdf7f0;
+    background-color: #081322;
     /* soft, warm background */
     font-family: "Spectral", serif;
 }
@@ -723,18 +799,27 @@ div#accordionFlushExample {
     gap: 30px;
 }
 
-/* Image */
-#contact .contact-img img {
+#map {
     width: 100%;
-    border-radius: 20px;
-    object-fit: cover;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-    transition: transform 0.5s ease;
+    height: 500px;
+    /* or whatever height fits your layout */
+    border-radius: 10px;
+    overflow: hidden;
+    pointer-events: none;
 }
 
-#contact .contact-img img:hover {
-    transform: scale(1.03);
+button.ol-zoom-in,
+button.ol-zoom-out {
+    min-width: 0;
+    padding: 15px !important;
+    font-size: 0;
+    border-radius: 4px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
 }
+
 
 /* Form Container */
 #contact .contact-form {
@@ -752,7 +837,7 @@ div#accordionFlushExample {
     font-weight: 400;
     font-style: italic;
     text-align: center;
-    color: #d62828;
+    color: #fff;
     /* law theme color */
 }
 
@@ -773,7 +858,7 @@ div#accordionFlushExample {
     display: flex;
     flex-direction: column;
     font-weight: 500;
-    color: #333;
+    color: #fff;
     flex: 1;
 }
 
@@ -825,7 +910,7 @@ div#accordionFlushExample {
 
 /* testimonials */
 section#testimonials {
-    padding: 40px 0;
+    padding: 40px 20px;
     background: hsla(49, 100%, 92%, 1);
     background: linear-gradient(180deg, hsla(49, 100%, 92%, 1) 43%, hsla(0, 100%, 91%, 1) 100%);
     background: -moz-linear-gradient(180deg, hsla(49, 100%, 92%, 1) 43%, hsla(0, 100%, 91%, 1) 100%);
@@ -867,7 +952,7 @@ section#testimonials>h2 {
 .carousel-card {
     position: absolute;
     width: 100%;
-    height: 390px;
+    height: 425px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
@@ -1092,6 +1177,30 @@ section#testimonials>p a.make-schedule:hover {
     opacity: 0.8;
 }
 
+.floating-icon {
+    position: fixed;
+    width: 90px;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    background-color: #fff;
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    height: 90px;
+}
+
+.floating-icon>img {
+    width: 100%;
+}
+
+.floating-icon:hover {
+    transform: scale(1.1);
+}
+
 /* ==============================
    RESPONSIVE DESIGN (MERGED)
    ============================== */
@@ -1146,6 +1255,10 @@ section#testimonials>p a.make-schedule:hover {
     .service:nth-child(3) {
         margin-top: 0px;
     }
+
+    .learnmore-box {
+        margin-top: 0;
+    }
 }
 
 /* ====== TABLET VIEW (≤ 992px) ====== */
@@ -1171,6 +1284,19 @@ section#testimonials>p a.make-schedule:hover {
 
     .left-image-wrap {
         left: 10%;
+    }
+
+    .service:nth-child(2) {
+        margin-top: 0px;
+    }
+
+    .service:nth-child(3) {
+        margin-top: 0px;
+    }
+
+    .learnmore-box {
+        margin-top: 0;
+        max-width: 440px;
     }
 
     /* Footer */
@@ -1261,6 +1387,13 @@ section#testimonials>p a.make-schedule:hover {
     .service:nth-child(3) {
         margin-top: 0px;
     }
+
+    .learnmore-box {
+        margin-top: 0;
+        max-width: 440px;
+    }
+
+
 }
 
 /* ====== TABLET / MOBILE HYBRID (≤ 768px) ====== */
@@ -1297,7 +1430,12 @@ section#testimonials>p a.make-schedule:hover {
 
     .our-story-box {
         right: 5%;
-        bottom: 2%;
+        bottom: 0%;
+    }
+
+    .learnmore-box {
+        margin-top: 0;
+        max-width: 440px;
     }
 
     /* Services */
@@ -1327,6 +1465,7 @@ section#testimonials>p a.make-schedule:hover {
     .learnmore-box {
         text-align: center;
         padding: 20px;
+        max-width: 440px;
     }
 
     .learnmore-box button {
@@ -1519,7 +1658,7 @@ section#testimonials>p a.make-schedule:hover {
     .our-story-box {
         width: 255px;
         right: 2.5%;
-        bottom: 2%;
+        bottom: 0;
         padding: 10px 15px;
     }
 
@@ -1564,7 +1703,8 @@ section#testimonials>p a.make-schedule:hover {
     }
 
     .our-story-box {
-        width: 205px;
+        width: 245px;
+        bottom: 0;
     }
 
     .col-text {
@@ -1583,7 +1723,8 @@ section#testimonials>p a.make-schedule:hover {
     }
 
     .left-image-wrap {
-        left: 5%;
+        /* left: 5%; */
+        display: none;
     }
 
     .client,
@@ -1701,11 +1842,11 @@ section#testimonials>p a.make-schedule:hover {
     }
 
     .container-fluid.hero-section {
-        min-height: 80vh;
+        min-height: 70vh;
     }
 
     .col.hero-column {
-        min-height: calc(100vh - 175px);
+        min-height: calc(100vh - 369px);
     }
 
     .trusted-attorneys {
@@ -1802,7 +1943,7 @@ section#testimonials>p a.make-schedule:hover {
     }
 
     .col.hero-column {
-        min-height: calc(100vh - 275px);
+        min-height: calc(100vh - 300px);
     }
 }
 

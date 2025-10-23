@@ -1,6 +1,6 @@
 let isScrolled = false;
 
-window.addEventListener("scroll", function () {
+function handleScroll() {
   const header = document.querySelector("header");
   if (window.scrollY > 50 && !isScrolled) {
     header.classList.add("scrolled");
@@ -9,7 +9,14 @@ window.addEventListener("scroll", function () {
     header.classList.remove("scrolled");
     isScrolled = false;
   }
-});
+}
+
+// Run once on load (in case page is refreshed mid-scroll)
+document.addEventListener("DOMContentLoaded", handleScroll);
+
+// Then keep listening for scroll events
+window.addEventListener("scroll", handleScroll);
+
 
 // ===== Animate elements on scroll =====
 document.addEventListener("DOMContentLoaded", () => {
@@ -73,6 +80,25 @@ document.addEventListener("DOMContentLoaded", () => {
   observer.observe(supportSection);
 });
 
+let learnMore = document.querySelector('.learnMore');
+let criminalDefense = document.querySelector('.criminalDefense');
+let civilLitigation = document.querySelector('.civilLitigation');
+let familyLaw = document.querySelector('.familyLaw');
+let customerProtection = document.querySelector('.customerProtection');
+let legalDrafting = document.querySelector('.legalDrafting');
+let deedRegistration = document.querySelector('.deedRegistration');
+let learnmore_box = document.querySelector('.learnmore-box');
+
+learnMore.addEventListener('click', () => {
+  learnmore_box.style.display = 'none';
+  criminalDefense.style.marginTop = 0;
+  civilLitigation.style.marginTop = 0;
+  familyLaw.style.marginTop = 0;
+  customerProtection.style.display = 'block';
+  legalDrafting.style.display = 'block';
+  deedRegistration.style.display = 'block';
+})
+
 // ===== Sequential animation for "Support" section cards (with delay before first) =====
 document.addEventListener("DOMContentLoaded", () => {
   const supportSection = document.querySelector("#support");
@@ -126,7 +152,7 @@ document.querySelectorAll('.faq-question').forEach(button => {
 
 // review
 const cards = document.querySelectorAll('.carousel-card');
-const positions = ['pos1','pos2','pos3','pos4','pos5'];
+const positions = ['pos1', 'pos2', 'pos3', 'pos4', 'pos5'];
 
 cards.forEach((card, i) => card.classList.add(positions[i]));
 
@@ -153,3 +179,45 @@ document.querySelector('.prev').addEventListener('click', rotateCarouselBackward
 
 // Auto-rotation
 // setInterval(rotateCarouselForward, 4000);
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Initialize map
+  const map = new ol.Map({
+    target: 'map',
+    layers: [
+      new ol.layer.Tile({
+        source: new ol.source.OSM(),
+      }),
+    ],
+    view: new ol.View({
+      center: ol.proj.fromLonLat([77.1372, 28.6196]),
+      zoom: 15,
+    }),
+  });
+
+  // Create a marker feature at the given coordinates
+  const marker = new ol.Feature({
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([77.1372, 28.6196])),
+  });
+
+  // Marker style (red pin)
+  marker.setStyle(
+    new ol.style.Style({
+      image: new ol.style.Icon({
+        anchor: [0.5, 1],
+        src: 'https://cdn-icons-png.flaticon.com/512/684/684908.png', // pin icon
+        scale: 0.07, // adjust size
+      }),
+    })
+  );
+
+  // Vector layer for marker
+  const vectorLayer = new ol.layer.Vector({
+    source: new ol.source.Vector({
+      features: [marker],
+    }),
+  });
+
+  map.addLayer(vectorLayer);
+});

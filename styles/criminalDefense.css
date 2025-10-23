@@ -1,0 +1,33 @@
+#criminalDefenseWrapper {
+    background: hsla(49, 100%, 92%, 1);
+    background: linear-gradient(180deg, hsla(49, 100%, 92%, 1) 43%, hsla(0, 100%, 91%, 1) 100%);
+    background: -moz-linear-gradient(180deg, hsla(49, 100%, 92%, 1) 43%, hsla(0, 100%, 91%, 1) 100%);
+    background: -webkit-linear-gradient(180deg, hsla(49, 100%, 92%, 1) 43%, hsla(0, 100%, 91%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#FFF8D8", endColorstr="#FFD2D2", GradientType=1);
+}
+
+.criminalDefense {
+    padding: 20px 40px;
+    padding-top: 75px;
+}
+
+.about {
+    text-align: center;
+}
+
+.about>h1,
+.info>h3 {
+    color: #d62828;
+}
+
+.about>p {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 22px
+}
+
+.info {
+    text-align: start;
+}
