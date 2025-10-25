@@ -221,3 +221,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   map.addLayer(vectorLayer);
 });
+
+// footer
+let date = new Date();
+let currentYear = date.getFullYear();
+
+let footerElement = document.querySelector('.footer-brand p');
+footerElement.innerHTML = `©${currentYear} Adv Deepak Tanwar, Inc.`;

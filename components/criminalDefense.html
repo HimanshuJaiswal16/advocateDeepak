@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criminal Defense</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Criminal Defense - Advocate Deepak Tanwar</title>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
@@ -27,12 +26,219 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.6.1/ol.css">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="./../style.css">
-    <link rel="stylesheet" href="./../styles/criminalDefense.css">
+
+    <style>
+        /* ===== CRIMINAL DEFENSE SECTION ===== */
+        .criminal-section {
+            position: relative;
+            padding: 120px 0 90px;
+            overflow: hidden;
+
+            background: hsla(49, 100%, 92%, 1);
+            background: linear-gradient(180deg, hsla(49, 100%, 92%, 1) 43%, hsla(0, 100%, 91%, 1) 100%);
+            background: -moz-linear-gradient(180deg, hsla(49, 100%, 92%, 1) 43%, hsla(0, 100%, 91%, 1) 100%);
+            background: -webkit-linear-gradient(180deg, hsla(49, 100%, 92%, 1) 43%, hsla(0, 100%, 91%, 1) 100%);
+
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#FFF8D8", endColorstr="#FFD2D2", GradientType=1);
+        }
+
+        .criminal-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: url('https://cdn-icons-png.flaticon.com/512/2910/2910760.png') center/280px no-repeat;
+            opacity: 0.03;
+            filter: grayscale(100%);
+        }
+
+        .section-title {
+            font-weight: 800;
+            color: #d62828;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 2.6rem;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .section-title::before,
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -12px;
+            width: 70px;
+            height: 3px;
+            background: #d62828;
+        }
+
+        .section-title::before {
+            left: -80px;
+        }
+
+        .section-title::after {
+            right: -80px;
+        }
+
+        .section-subtitle {
+            color: #000;
+            max-width: 750px;
+            margin: 25px auto 60px;
+            font-size: 1.15rem;
+            font-style: italic;
+            border-left: 3px solid #d62828;
+            padding-left: 15px;
+        }
+
+        /* --- Service Cards --- */
+        .service-card {
+            position: relative;
+            background: #081322;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            padding: 45px 25px;
+            text-align: center;
+            transition: all 0.4s ease;
+            box-shadow: 0 0 25px rgb(229 45 45 / 9%);
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .service-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(214, 40, 40, 0);
+            border-radius: inherit;
+            z-index: 0;
+            transition: background 0.4s ease;
+        }
+
+        .service-card:hover::before {
+            background: rgba(214, 40, 40, 0.08);
+        }
+
+        .service-card:hover {
+            border: 2px solid;
+            transform: translateY(-10px);
+            border-color: #d62828;
+            box-shadow: 0 0 40px rgba(214, 40, 40, 0.2);
+        }
+
+        .service-card i {
+            color: #d62828;
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card h4 {
+            color: #d62828;
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            text-transform: capitalize;
+        }
+
+        .service-card p {
+            color: #fff;
+            font-size: 0.96rem;
+        }
+
+        /* --- Why Choose Us --- */
+        .why-choose {
+            background: #081322;
+            border-radius: 20px;
+            padding: 60px 50px;
+            margin-top: 90px;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 25px rgb(229 45 45 / 9%);
+        }
+
+        .why-choose::before {
+            content: "\f500";
+            font-family: "bootstrap-icons";
+            position: absolute;
+            font-size: 6rem;
+            color: rgb(229 45 45 / 23%);
+            top: 20px;
+            right: 40px;
+            transform: rotate(-10deg);
+        }
+
+        .why-choose h3 {
+            color: #d62828;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 35px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        .why-choose ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 18px;
+            padding-left: 0;
+            margin-top: 20px;
+        }
+
+        .why-choose li {
+            list-style: none;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 10px;
+            padding: 16px 20px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .why-choose li:hover {
+            border-color: #d62828;
+            background: #d6282814;
+        }
+
+        .why-choose i {
+            color: #d62828;
+            margin-right: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* --- Animation --- */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.9s ease-out forwards;
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .section-title::before,
+            .section-title::after {
+                display: none;
+            }
+
+            .why-choose {
+                padding: 40px 25px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <section id="criminalDefenseWrapper">
+    <section id="criminal-defense" class="criminal-section">
         <header>
             <nav class="navbar navbar-expand-lg w-100">
                 <div class="container-fluid">
@@ -45,59 +251,77 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#support">Support</a></li>
+                        </ul>
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                             <li class="nav-item"><a class="nav-link active" href="./../index.html#hero">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="./../index.html#services">Services</a></li>
-                            <li class="nav-item"><a class="nav-link" href="./../index.html#support">Support</a></li>
-                            <li class="nav-item"><a class="nav-link contact-button" href="./../index.html#contact">Contact Me</a></li>
+                            <li class="nav-item"><a class="nav-link contact-button" href="#contact">Contact Me</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
         </header>
-        <div class="container-fluid criminalDefense">
-            <div class="row">
-                <div class="col about">
-                    <h1>Criminal Defense</h1>
-                    <p>Facing criminal charges can be overwhelming — but you don’t have to navigate the legal system
-                        alone. We provide experienced defense, protecting your rights at every stage: bail, trial, and
-                        appeals.</p>
 
-                    <div class="info">
-                        <h3>Bail & Pre-Trial Representation</h3>
-                        <p>The first steps after an arrest are crucial. We advocate for fair bail conditions, ensuring
-                            your immediate freedom while preparing a strong case. Our team guides you through pre-trial
-                            hearings, investigations, and evidence gathering.</p>
+        <div class="container position-relative text-center">
+            <h1 class="section-title fade-up">Criminal Defense</h1>
+            <p class="section-subtitle fade-up">
+                Protecting your rights, defending your freedom, and guiding you through every stage of criminal
+                proceedings.
+            </p>
 
-                        <h3>Trial Defense</h3>
-                        <p>Whether misdemeanor or felony charges, our defense strategy is tailored to your case. We
-                            challenge unlawful evidence, cross-examine witnesses, and present compelling arguments in
-                            your favor. Our goal: protect your rights and secure the best possible outcome.</p>
-
-
-                        <h3>Appeals & Post-Conviction Relief</h3>
-                        <p>If you’ve been convicted, hope is not lost. We handle appeals and post-conviction petitions
-                            to overturn wrongful verdicts or reduce unfair sentences. Our appellate strategies are built
-                            on deep legal research and precise argumentation.</p>
-
-                        <h3>Why Choose Us</h3>
-                        <ul>
-                            <li>
-                                Proven track record in criminal defense cases
-                            </li>
-                            <li>
-                                Client-centered approach with personalized strategies
-                            </li>
-                            <li>
-                                24/7 availability for urgent legal assistance
-
-                            </li>
-                            <li>
-                                Compassionate advocacy with strong courtroom presence
-                            </li>
-                        </ul>
+            <!-- Services -->
+            <div class="row g-4 fade-up">
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <i class="bi bi-unlock-fill"></i>
+                        <h4>Bail & Pre-Trial</h4>
+                        <p>We advocate for fair bail conditions and represent you in pre-trial hearings and
+                            investigations.</p>
                     </div>
                 </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <i class="bi bi-people-fill"></i>
+                        <h4>Trial Defense</h4>
+                        <p>Comprehensive defense strategies for misdemeanor and felony charges to protect your rights in
+                            court.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <i class="bi bi-arrow-repeat"></i>
+                        <h4>Appeals & Post-Conviction</h4>
+                        <p>We handle appeals and post-conviction relief to overturn wrongful verdicts or reduce
+                            sentences.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <i class="bi bi-shield-fill-check"></i>
+                        <h4>Rights Protection</h4>
+                        <p>Ensuring your constitutional and legal rights are upheld at every stage of criminal
+                            proceedings.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Choose Us -->
+            <div class="why-choose fade-up mt-5 text-start">
+                <h3>Why Choose Us</h3>
+                <ul>
+                    <li><i class="bi bi-check-circle-fill"></i> Proven track record in criminal defense cases</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Personalized, client-centered defense strategies</li>
+                    <li><i class="bi bi-check-circle-fill"></i> 24/7 availability for urgent legal assistance</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Compassionate advocacy with strong courtroom presence
+                    </li>
+                    <li><i class="bi bi-check-circle-fill"></i> Experienced guidance through bail, trial, and appeals
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
@@ -106,7 +330,7 @@
     <footer class="footer">
         <div class="footer-left">
             <h2>Contact Us</h2>
-            <p>Trusted attorneys committed to protecting your rights and securing your future.</p>
+            <p>Trusted Advocate committed to protecting your rights and securing your future.</p>
         </div>
 
         <div class="footer-right">
@@ -117,8 +341,8 @@
                     <a href="./../index.html#services">Services</a>
                 </div>
                 <div class="col">
-                    <a style="cursor: pointer;">Team</a>
-                    <a style="cursor: pointer;">Blog</a>
+                    <a>Team</a>
+                    <a>Blog</a>
                 </div>
                 <div class="col">
                     <a href="./../index.html#support">Support</a>
@@ -129,7 +353,7 @@
 
             <div class="footer-brand">
                 <h1>Adv Deepak Tanwar</h1>
-                <p>©2025 Adv Deepak Tanwar, Inc.</p>
+                <p></p>
                 <div class="social-icons">
                     <i class="fab fa-facebook-f"></i>
                     <i class="fab fa-twitter"></i>
@@ -145,6 +369,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/ol@v10.6.1/dist/ol.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./../index.js"></script>
     <script src="./../components-js/floating.js"></script>
 </body>

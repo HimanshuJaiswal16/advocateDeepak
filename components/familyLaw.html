@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>family Law</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Family Law - Advocate Deepak Tanwar</title>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
@@ -27,12 +26,221 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.6.1/ol.css">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="./../style.css">
-    <link rel="stylesheet" href="./../styles/criminalDefense.css">
+
+    <style>
+        /* ===== FAMILY LAW SECTION ===== */
+        .family-law-section {
+            position: relative;
+            padding: 120px 0 90px;
+            overflow: hidden;
+            /* background: linear-gradient(180deg, #fff7da 40%, #ffe1e1 100%); */
+            background: hsla(49, 100%, 92%, 1);
+            background: linear-gradient(180deg, hsla(49, 100%, 92%, 1) 43%, hsla(0, 100%, 91%, 1) 100%);
+            background: -moz-linear-gradient(180deg, hsla(49, 100%, 92%, 1) 43%, hsla(0, 100%, 91%, 1) 100%);
+            background: -webkit-linear-gradient(180deg, hsla(49, 100%, 92%, 1) 43%, hsla(0, 100%, 91%, 1) 100%);
+
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#FFF8D8", endColorstr="#FFD2D2", GradientType=1);
+
+        }
+
+        .family-law-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: url('https://cdn-icons-png.flaticon.com/512/808/808439.png') center/280px no-repeat;
+            opacity: 0.04;
+            filter: grayscale(100%);
+        }
+
+        .section-title {
+            font-weight: 800;
+            color: #d62828;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 2.6rem;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .section-title::before,
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -12px;
+            width: 70px;
+            height: 3px;
+            background: #d62828;
+        }
+
+        .section-title::before {
+            left: -80px;
+        }
+
+        .section-title::after {
+            right: -80px;
+        }
+
+        .section-subtitle {
+            color: #000;
+            max-width: 750px;
+            margin: 25px auto 60px;
+            font-size: 1.15rem;
+            font-style: italic;
+            border-left: 3px solid #d62828;
+            padding-left: 15px;
+        }
+
+        /* --- Service Cards --- */
+        .service-card {
+            position: relative;
+            background: #081322;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            padding: 45px 25px;
+            text-align: center;
+            transition: all 0.4s ease;
+            box-shadow: 0 0 25px rgb(229 45 45 / 9%);
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .service-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(214, 40, 40, 0);
+            border-radius: inherit;
+            z-index: 0;
+            transition: background 0.4s ease;
+        }
+
+        .service-card:hover::before {
+            background: rgba(214, 40, 40, 0.08);
+        }
+
+        .service-card:hover {
+            border: 2px solid;
+            transform: translateY(-10px);
+            border-color: #d62828;
+            box-shadow: 0 0 40px rgba(214, 40, 40, 0.2);
+        }
+
+        .service-card i {
+            color: #d62828;
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card h4 {
+            color: #d62828;
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            text-transform: capitalize;
+        }
+
+        .service-card p {
+            color: #fff;
+            font-size: 0.96rem;
+        }
+
+        /* --- Why Choose Us --- */
+        .why-choose {
+            background: #081322;
+            border-radius: 20px;
+            padding: 60px 50px;
+            margin-top: 90px;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 25px rgb(229 45 45 / 9%);
+        }
+
+        .why-choose::before {
+            content: "\f500";
+            font-family: "bootstrap-icons";
+            position: absolute;
+            font-size: 6rem;
+            color: rgb(229 45 45 / 23%);
+            top: 20px;
+            right: 40px;
+            transform: rotate(-10deg);
+        }
+
+        .why-choose h3 {
+            color: #d62828;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 35px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        .why-choose ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 18px;
+            padding-left: 0;
+            margin-top: 20px;
+        }
+
+        .why-choose li {
+            list-style: none;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 10px;
+            padding: 16px 20px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .why-choose li:hover {
+            border-color: #d62828;
+            background: #d6282814;
+        }
+
+        .why-choose i {
+            color: #d62828;
+            margin-right: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* --- Animation --- */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.9s ease-out forwards;
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+
+            .section-title::before,
+            .section-title::after {
+                display: none;
+            }
+
+            .why-choose {
+                padding: 40px 25px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <section id="criminalDefenseWrapper">
+    <section id="family-law" class="family-law-section">
         <header>
             <nav class="navbar navbar-expand-lg w-100">
                 <div class="container-fluid">
@@ -45,60 +253,79 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#support">Support</a></li>
+                        </ul>
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link active" href="./../index.html#hero">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="./../index.html#services">Services</a></li>
-                            <li class="nav-item"><a class="nav-link" href="./../index.html#support">Support</a></li>
-                            <li class="nav-item"><a class="nav-link contact-button"
-                                    href="./../index.html#contact">Contact Me</a></li>
+                            <li class="nav-item"><a class="nav-link contact-button" href="#contact">Contact Me</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
         </header>
-        <div class="container-fluid criminalDefense">
-            <div class="row">
-                <div class="col about">
-                    <h1>Family Law</h1>
-                    <p>Family law governs legal matters such as divorce, child custody, adoption, and domestic
-                        agreements. Our experienced attorneys guide you through sensitive issues with compassion and
-                        expertise.</p>
 
-                    <div class="info">
-                        <h3>Divorce & Separation</h3>
-                        <p>We assist clients with all aspects of divorce, including filing, settlements, asset division,
-                            spousal support, and amicable or contested proceedings.</p>
+        <div class="container position-relative text-center">
+            <h1 class="section-title fade-up">Family Law</h1>
+            <p class="section-subtitle fade-up">
+                “Guiding families through change with compassion and clarity.”
+                Our firm provides trusted counsel in matters of marriage, child custody, adoption, and domestic
+                relationships.
+            </p>
 
-                        <h3>Child Custody & Support</h3>
-                        <p>Our team advocates for the best interests of children, helping parents establish custody
-                            arrangements, visitation rights, and child support agreements.</p>
-
-
-                        <h3>Adoption & Guardianship</h3>
-                        <p>We guide clients through the legal process of adoption and guardianship, ensuring all
-                            requirements are met and the process is smooth and legally compliant.</p>
-
-                        <h3>Domestic Agreements & Mediation</h3>
-                        <p>We draft and review prenuptial, postnuptial, and separation agreements, and provide mediation
-                            services to resolve disputes amicably whenever possible.</p>
-
-                        <h3>Why Choose Us</h3>
-                        <ul>
-                            <li>
-                                Experienced family law attorneys
-                            </li>
-                            <li>
-                                Compassionate guidance through sensitive issues
-                            </li>
-                            <li>
-                                Focus on fair and practical solutions
-                            </li>
-                            <li>
-                                Personalized strategies for each client
-                            </li>
-                        </ul>
+            <!-- Services -->
+            <div class="row g-4 fade-up">
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <i class="bi bi-people"></i>
+                        <h4>Divorce & Separation</h4>
+                        <p>Expert assistance in managing divorce proceedings, settlements, and asset divisions with
+                            empathy and confidentiality.</p>
                     </div>
                 </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <i class="bi bi-person-hearts"></i>
+                        <h4>Child Custody & Support</h4>
+                        <p>Protecting children’s best interests through fair custody, visitation, and financial support
+                            arrangements.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <i class="bi bi-house-heart"></i>
+                        <h4>Adoption & Guardianship</h4>
+                        <p>Guidance through legal adoption and guardianship, ensuring smooth and compliant
+                            family-building processes.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <i class="bi bi-chat-square-heart"></i>
+                        <h4>Domestic Agreements & Mediation</h4>
+                        <p>Drafting prenuptial and separation agreements and offering mediation for amicable
+                            resolutions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Choose Us -->
+            <div class="why-choose fade-up mt-5 text-start">
+                <h3>Why Choose Us</h3>
+                <ul>
+                    <li><i class="bi bi-check-circle-fill"></i> Compassionate approach to sensitive family matters</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Skilled negotiators minimizing conflict and stress</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Transparent communication and trusted guidance</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Tailored legal strategies protecting your family’s
+                        interests</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Expertise in both amicable and contested cases</li>
+                    <li><i class="bi bi-check-circle-fill"></i> End-to-end support — from counseling to court
+                        representation</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -107,7 +334,7 @@
     <footer class="footer">
         <div class="footer-left">
             <h2>Contact Us</h2>
-            <p>Trusted attorneys committed to protecting your rights and securing your future.</p>
+            <p>Trusted Advocate committed to protecting your rights and securing your future.</p>
         </div>
 
         <div class="footer-right">
@@ -118,8 +345,8 @@
                     <a href="./../index.html#services">Services</a>
                 </div>
                 <div class="col">
-                    <a style="cursor: pointer;">Team</a>
-                    <a style="cursor: pointer;">Blog</a>
+                    <a>Team</a>
+                    <a>Blog</a>
                 </div>
                 <div class="col">
                     <a href="./../index.html#support">Support</a>
@@ -130,7 +357,7 @@
 
             <div class="footer-brand">
                 <h1>Adv Deepak Tanwar</h1>
-                <p>©2025 Adv Deepak Tanwar, Inc.</p>
+                <p></p>
                 <div class="social-icons">
                     <i class="fab fa-facebook-f"></i>
                     <i class="fab fa-twitter"></i>
@@ -146,6 +373,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/ol@v10.6.1/dist/ol.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./../index.js"></script>
     <script src="./../components-js/floating.js"></script>
 </body>
