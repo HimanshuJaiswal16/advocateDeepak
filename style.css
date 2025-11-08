@@ -14,6 +14,18 @@ section {
     scroll-margin-top: 80px;
 }
 
+/* Change text selection color */
+::selection {
+  background: #ffb703; /* Your custom background color */
+  color: #000;         /* Text color inside the selection */
+}
+
+/* For Firefox (needs vendor prefix) */
+::-moz-selection {
+  background: #ffb703;
+  color: #000;
+}
+
 /* ===== NAVBAR ===== */
 header {
     position: fixed;
@@ -323,8 +335,8 @@ section#about .image-wrap {
 
 section#about img {
     width: 100%;
-    max-height: 448px;
-    max-width: 400px;
+    /* max-height: 448px; */
+    /* max-width: 400px; */
     margin: 0 auto;
     border-radius: 4px;
 }
@@ -383,7 +395,7 @@ section#about .name {
 }
 
 .service:hover {
-    transform: scale(1.05);
+    transform: scale(1.05) !important;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
@@ -677,6 +689,7 @@ section#result>h2 {
     left: 3%;
     color: #c72b34;
     background-color: #fff;
+    font-size: 4rem;
 }
 
 .recovered span {
