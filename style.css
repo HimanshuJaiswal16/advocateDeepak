@@ -820,7 +820,7 @@ div#accordionFlushExample {
     /* or whatever height fits your layout */
     border-radius: 10px;
     overflow: hidden;
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 
 button.ol-zoom-in,
@@ -869,7 +869,7 @@ button.ol-zoom-out {
     flex-wrap: wrap;
 }
 
-#contact label {
+#contact form label {
     display: flex;
     flex-direction: column;
     font-weight: 500;
@@ -903,7 +903,7 @@ button.ol-zoom-out {
 }
 
 /* Button */
-#contact button {
+#contact form button {
     align-self: center;
     padding: 12px 30px;
     font-size: 1rem;
@@ -916,7 +916,7 @@ button.ol-zoom-out {
     transition: all 0.3s ease;
 }
 
-#contact button:hover {
+#contact form button:hover {
     background: #d62828;
     color: #fff;
     transform: scale(1.08);

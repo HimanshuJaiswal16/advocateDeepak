@@ -178,83 +178,38 @@ document.querySelector('.next').addEventListener('click', rotateCarouselForward)
 document.querySelector('.prev').addEventListener('click', rotateCarouselBackward);
 
 // Auto-rotation
-// setInterval(rotateCarouselForward, 4000);
-
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   // Initialize map
-//   const map = new ol.Map({
-//     target: 'map',
-//     layers: [
-//       new ol.layer.Tile({
-//         source: new ol.source.OSM(),
-//       }),
-//     ],
-//     view: new ol.View({
-//       center: ol.proj.fromLonLat([77.1372, 28.6196]),
-//       zoom: 15,
-//     }),
-//   });
-
-//   // Create a marker feature at the given coordinates
-//   const marker = new ol.Feature({
-//     geometry: new ol.geom.Point(ol.proj.fromLonLat([77.1372, 28.6196])),
-//   });
-
-//   // Marker style (red pin)
-//   marker.setStyle(
-//     new ol.style.Style({
-//       image: new ol.style.Icon({
-//         anchor: [0.5, 1],
-//         src: 'https://cdn-icons-png.flaticon.com/512/684/684908.png', // pin icon
-//         scale: 0.07, // adjust size
-//       }),
-//     })
-//   );
-
-//   // Vector layer for marker
-//   const vectorLayer = new ol.layer.Vector({
-//     source: new ol.source.Vector({
-//       features: [marker],
-//     }),
-//   });
-
-//   map.addLayer(vectorLayer);
-// });
+setInterval(rotateCarouselForward, 4000);
 
 function initMap() {
-  // Your location coordinates
-  const myLocation = { lat: 28.6139, lng: 77.2090 }; // Example: New Delhi
+  const myLatLng = { lat: 28.620944, lng: 77.136209 };
 
-  // Create map
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 14,
-    center: myLocation,
+  const map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 19,
+    center: myLatLng,
   });
 
-  // Add marker
   const marker = new google.maps.Marker({
-    position: myLocation,
+    position: myLatLng,
     map: map,
-    title: "We are here!",
+    title: 'Advocate Deepak Tanwar',
   });
 }
 
- var form = document.getElementById('sheetdb-form');
-        form.addEventListener("submit", e => {
-            e.preventDefault();
-            fetch(form.action, {
-                method: "POST",
-                body: new FormData(document.getElementById("sheetdb-form")),
-            }).then(
-                response => response.json()
-            ).then((html) => {
-                alert('Submitted !! 😊 Thank you ')
-                window.location.href = '';
-                location.reload();
-            });
-        });
- 
+var form = document.getElementById('sheetdb-form');
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(document.getElementById("sheetdb-form")),
+  }).then(
+    response => response.json()
+  ).then((html) => {
+    alert('Submitted !! 😊 Thank you ')
+    window.location.href = '';
+    location.reload();
+  });
+});
+
 
 // footer
 let date = new Date();
